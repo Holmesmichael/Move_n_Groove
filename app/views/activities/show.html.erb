@@ -20,5 +20,8 @@
   <%= @activity.user_id %>
 </p>
 
+<%= react_component 'Greeting', {activity: @activity} %>
+ 
+
 <%= link_to 'Edit', edit_activity_path(@activity) %> |
 <%= link_to 'Back', activities_path %>
