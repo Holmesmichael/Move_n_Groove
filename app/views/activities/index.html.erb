@@ -17,7 +17,7 @@
     <% @activities.each do |activity| %>
       <tr>
         <td><%= activity.activity %></td>
-        <td><%= activity.duration %></td>
+        <td><%= activity.duration %> hour(s)</td>
         <td><%= activity.date %></td>
         <td><%= activity.user.email %></td>
         <td><%= link_to 'Show', activity %></td>

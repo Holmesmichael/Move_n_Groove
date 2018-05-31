@@ -17,6 +17,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'react-rails', '~> 1.7', '>= 1.7.1'
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'bcrypt', git: 'https://github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
+gem 'bootstrap', '~> 4.0'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 
 
 group :development, :test do
