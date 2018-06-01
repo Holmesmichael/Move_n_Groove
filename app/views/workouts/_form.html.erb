@@ -1,0 +1,30 @@
+<%= form_with(model: new_activity_workout, local: true) do |form| %>
+
+
+  <% if workout.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+
+      <ul>
+      <% workout.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.number_field :duration, id: :workout_duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes, id: :workout_notes %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

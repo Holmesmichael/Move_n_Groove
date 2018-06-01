@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
   
-  devise_for :users
+  devise_for :users, controllers: {
+    sessions: 'users/sessions'
+  }
 
   root 'static_pages#home'
 
   get 'static_pages/home'
 
-  resources :activities
+  resources :activities do
+    resources :workouts
+  end
+
+  authenticated :user do
+    root 'workouts#index', as: :authenticated_root
+  end
  
 end

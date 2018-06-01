@@ -1,0 +1,19 @@
+<nav class="navbar fixed-bottom navbar-light navbar-expand-lg">
+  <div class="container">
+      <ul class="nav justify-content-center">
+          <li class="nav-item"><%= link_to 'Home', root_path %></li>
+          <li class="nav-item"><%= link_to 'Activities', activities_path %></li>
+            <% if user_signed_in? %>
+                              
+              <li class="nav-item">  <%= link_to 'Settings', edit_user_registration_path %></li>
+              <li class="nav-item">  <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
+
+            <% else %>
+              <li class="nav-item"> <%= link_to 'Sign Up', new_user_registration_path %></li>
+              <li class="nav-item">  <%= link_to 'Sign In', new_user_session_path %></li>
+
+            <% end %>
+        </ul>
+        &copy; 2018 Move&Groove - Michael Holmes
+  </div>
+</nav>
