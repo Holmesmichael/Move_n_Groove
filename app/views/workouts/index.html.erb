@@ -16,8 +16,8 @@
       <tr>
         <td><%= workout.duration %></td>
         <td><%= workout.notes %></td>
-        <td><%= link_to 'Show', activity_workout %></td>
-        <td><%= link_to 'Edit', edit_activity_workout_path(workout) %></td>
+        <td><%= link_to 'Show', workout %></td>
+        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
         <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -1,7 +1,7 @@
 class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
-
+  before_action :get_activity
   # GET /workouts
   # GET /workouts.json
   def index
@@ -12,6 +12,7 @@ class WorkoutsController < ApplicationController
 
   
   def show
+    @workout = Workout.find(params[:id])
   end
 
   def new
@@ -27,10 +28,8 @@ class WorkoutsController < ApplicationController
   # POST /workouts
   # POST /workouts.json
   def create
-    # @workout = current_user.workouts.build({activity_id: params[:id]})  #error "Activity must exist"
     @workout = Workout.new(workout_params)
     @workout.user = current_user
-    @activity = Activity.new(workout_params[:activity_id])   #error "Couldn't find Activity with 'id'=
       respond_to do |format|
       if @workout.save
         format.html { redirect_to @workout, notice: 'Your workout was logged!' }
@@ -71,11 +70,15 @@ class WorkoutsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_workout
-      @workout = workout.find(params[:id])
+      @workout = Workout.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def workout_params
       params.require(:workout).permit(:user_id, :duration, :notes, :activity_id)
+    end
+
+    def get_activity
+      @activity = Activity.all
     end
 end

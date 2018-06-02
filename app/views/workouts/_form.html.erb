@@ -1,30 +1,28 @@
-<%= form_with(model: new_activity_workout, local: true) do |form| %>
+<%= form_with(model: workout, local: true) do |form| %>
+  <div class="container">
+    <div class="jumbotron">
+
+      <div class="Activity">
+       <%= form.select(:activity_id, options_from_collection_for_select(@activity, :id, :name)) %> 
+      </div>
+
+    
+      <div class="field">
+        <%= form.label :duration %>
+        <%= form.number_field :duration, id: :workout_duration %>
+      </div>
+
+      <div class="field">
+        <%= form.label :notes %>
+        <%= form.text_field :notes, id: :workout_notes %>
+      </div>
 
 
-  <% if workout.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(workout.errors.count, "error") %> prohibited this workout from being saved:</h2>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
 
-      <ul>
-      <% workout.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= form.label :duration %>
-    <%= form.number_field :duration, id: :workout_duration %>
   </div>
 
-  <div class="field">
-    <%= form.label :notes %>
-    <%= form.text_field :notes, id: :workout_notes %>
-  </div>
-
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

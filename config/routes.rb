@@ -8,12 +8,9 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
 
-  resources :activities do
-    resources :workouts
-  end
+  resources :activities 
+  resources :workouts
+  
 
-  authenticated :user do
-    root 'workouts#index', as: :authenticated_root
-  end
  
 end
