@@ -1,16 +1,24 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-2">
-        </div>
+<div class="home-page">
+    <div class="home-photo">
+        <%= image_tag get_random_image %>
+    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                </div>
 
-        <div class="col-lg-8">
-        <%= image_tag("field.png", {:style => "width:100%;"}) %>
-            <div class="jumbotron">
-                <h1>Move n' Groove</h1>
+                <div class="col-lg-8">
+                    <div class="main-jumbo">
+                        <div class="jumbotron" style="background-color: transparent;">
+                            <h1>Time for a change</h1>
+                            <h4>...one day at a time</h4>
+                            <button type="button" class="btn btn-primary"><%= link_to 'Join Now', new_activity_path %></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                </div>
             </div>
         </div>
-
-        <div class="col-md-2">
-        </div>
-    </div>
 </div>

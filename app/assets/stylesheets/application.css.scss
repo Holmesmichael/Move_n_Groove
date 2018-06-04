@@ -16,6 +16,14 @@
 
  @import "bootstrap";
 
+ .main-container {
+  background-color: #fff;
+ }
+
+ /* --------------------------
+          Basic Boostrap
+ ---------------------------*/
+
 body {
   background-color: #fff;
   color: #333;
@@ -45,8 +53,7 @@ a {
   }
 
   &:hover {
-    color: #fff;
-    background-color: #000;
+    color: #035891;
   }
 }
 
@@ -100,3 +107,75 @@ div {
 label {
   display: block;
 }
+
+
+ /* --------------------------
+          Colors used
+ ---------------------------*/
+ /*      #f3fb18 (bright yellow)
+         #edf3fc (light gray)
+         #035891 (navyist blue)
+         #3f8da4 (teal)
+         #544f4  (dark gray) */
+
+
+  /* --------------------------
+          Typography
+ ---------------------------*/
+
+ @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+ 
+ h1, h2, h3, h4, h5, h6 {
+   font-family: 'Abril Fatface', serif;
+ }
+
+ .main-jumbo h1, h4 {
+  color: white;
+ }
+
+   /* --------------------------
+          Buttons
+ ---------------------------*/
+
+.btn-primary {
+  background-color: #f3fb18 !important;
+  border: none !important;
+}
+
+  /* --------------------------
+          Navigation
+ ---------------------------*/
+
+  /* --------------------------
+          Footer
+ ---------------------------*/
+
+  /* --------------------------
+          Static Page
+ ---------------------------*/
+ 
+
+ .main-jumbo {
+  text-align:center;
+  margin-top: -750px; 
+ }
+
+ .home-photo {
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   margin-left: -50px;
+   margin-top: -75px;
+ }
+  /* --------------------------
+          Activities 
+ ---------------------------*/
+
+  /* --------------------------
+          Forms
+ ---------------------------*/
+
+  /* --------------------------
+          Workouts
+ ---------------------------*/
