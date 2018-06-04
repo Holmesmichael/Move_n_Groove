@@ -6,8 +6,8 @@ class WorkoutsController < ApplicationController
   # GET /workouts.json
   def index
     @workouts = Workout.all
-    # @activities = Activity.all.order(:id)
-    # @user = current_user
+    #  @workout = Workout.find(params[:user_id])
+    # @workout.user_id = current_user
   end
 
   

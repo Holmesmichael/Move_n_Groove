@@ -1,29 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Workout</h1>
+    <h1>Workout</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Duration</th>
-      <th>Notes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Duration</th>
+          <th>Notes</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @workouts.each do |workout| %>
-      <tr>
-        <td><%= workout.duration %></td>
-        <td><%= workout.notes %></td>
-        <td><%= link_to 'Show', workout %></td>
-        <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-        <td><%= link_to 'Destroy', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @workouts.each do |workout| %>
 
-<br>
+           <% if workout.user == current_user %>
 
-<%= link_to 'New Workout', new_workout_path %>
+              <tr>
+              <td><%= workout.duration %></td>
+              <td><%= workout.notes %></td>
+              <td><%= link_to 'Show', workout %></td>
+              <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
+              <td><%= link_to 'Delete', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            
+            <% end  %>
+        <% end %>
+
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Workout', new_workout_path %>
+
+
+

@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Activity:</strong>
+  <%= @activity.find(@workout.activity_id).name %>
+</p>
 
 <p>
   <strong>Duration:</strong>
@@ -11,10 +15,6 @@
   <%= @workout.notes %>
 </p>
 
-<p>
-  <strong>Activity:</strong>
-  <%= @workout.activity_id %>
-</p>
 
 <%= link_to 'Edit', edit_workout_path(@workout) %> |
 <%= link_to 'Back', activity_path %>
