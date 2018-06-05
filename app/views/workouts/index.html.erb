@@ -9,38 +9,33 @@
         <div class="workout-index">
 
           <h1>Workout</h1>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th scope="col">Duration (minutes) </th>
+                  <th scope="col">Notes (How was your session?)</th>
+                  <th scope="col" colspan="3"></th>
+                </tr>
+              </thead>
 
-          <table>
-            <thead>
-              <tr>
-                <th>Duration</th>
-                <th>Notes</th>
-                <th colspan="3"></th>
-              </tr>
-            </thead>
+              <tbody>
+                <% @workouts.each do |workout| %>
 
-            <tbody>
-              <% @workouts.each do |workout| %>
+                  <% if workout.user == current_user %>
 
-                <% if workout.user == current_user %>
+                      <tr>
+                      <td><%= workout.duration %></td>
+                      <td><%= workout.notes %></td>
+                      <td><button type="button" class="btn btn-warning"><%= link_to 'View', workout_path(workout) %></button><td>
+                      </tr>
+                    
+                    <% end  %>
+                <% end %>
 
-                    <tr>
-                    <td><%= workout.duration %></td>
-                    <td><%= workout.notes %></td>
-                    <td><%= link_to 'Show', workout %></td>
-                    <td><%= link_to 'Edit', edit_workout_path(workout) %></td>
-                    <td><%= link_to 'Delete', workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                    </tr>
-                  
-                  <% end  %>
-              <% end %>
-
-            </tbody>
-          </table>
-
-          <br>
-
-          <%= link_to 'New Workout', new_workout_path %>
+              </tbody>
+            </table>
+    
+           <button type="button" class="btn btn-primary"><%= link_to 'New Workout', new_workout_path %></button>
         </div>
     </div>
 
@@ -49,3 +44,6 @@
     </div>
   </div>
 </div>
+
+
+   

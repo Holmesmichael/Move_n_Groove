@@ -17,7 +17,7 @@
  @import "bootstrap";
 
  .main-container {
-  background-color: #fff;
+  background-color: #fffffa;
  }
 
  /* --------------------------
@@ -25,7 +25,7 @@
  ---------------------------*/
 
 body {
-  background-color: #fff;
+  background-color: #fffffa;
   color: #333;
   margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
@@ -40,7 +40,7 @@ p, ol, ul, td {
 }
 
 pre {
-  background-color: #eee;
+  background-color: #fffffa;
   padding: 10px;
   font-size: 11px;
 }
@@ -86,7 +86,7 @@ div {
   border: 2px solid red;
   padding: 7px 7px 0;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
+  background-color: #fffffa;
 
   h2 {
     text-align: left;
@@ -95,7 +95,7 @@ div {
     font-size: 12px;
     margin: -7px -7px 0;
     background-color: #c00;
-    color: #fff;
+    color: #fffffa;
   }
 
   ul li {
@@ -113,11 +113,11 @@ label {
           Colors used
  ---------------------------*/
  /*      #f3fb18 (bright yellow)
-         #edf3fc (light gray)
-         #035891 (navyist blue)
+         #f9fbfc (light gray)
          #3f8da4 (teal)
-         #544f4f  (dark gray)
-         aaa0a0  (light gray) */
+         #515151 (dark gray)
+         aaa0a0  (light gray)
+         #fffffa (almost white) */
 
 
   /* --------------------------
@@ -131,17 +131,23 @@ label {
    font-family: 'Abril Fatface', serif;
  }
 
- .navbar ul, nav-item, p, .btn {
+ .navbar ul, nav-item, p, th, tr, td, .btn {
    font-family: 'Comfortaa', serif !important;
    font-weight: 200;
  }
 
  .main-jumbo h1, h4 {
-  color: white;
+  color: #fffffa;
  }
 
  .field {
   font-family: 'Comfortaa', serif !important;
+}
+
+.activities-index .col-sm p  {
+  font-family: 'Comfortaa', serif !important;
+  font-size:  1.5em;
+  font-weight: 300;
 }
 
    /* --------------------------
@@ -152,9 +158,18 @@ label {
   background-color: #f3fb18 !important;
   border: none !important;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
 }
 
+.btn-warning {
+  border: none !important;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  background-color: #a5a5a5;
+}
+
+.btn-default  {
+  background-color: #f3fb18 !important;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
   /* --------------------------
           Navigation
  ---------------------------*/
@@ -175,7 +190,8 @@ label {
  ---------------------------*/
 
  .navbar p {
-   color: #edf3fc;
+   color: #f9fbfc
+   #f9fbfc;
    padding-top: 3px;
  }
 
@@ -202,13 +218,28 @@ label {
  ---------------------------*/
 
  .activities-index {
-  margin-top: 100px;
   text-align: center;
-  margin: 10px 10px 10px 10px;
   border-radius: 5%;
   padding-top: 5px;
   padding-bottom: 5px;
   color: #515151;
+ }
+
+//  .activities-index .col-sm :hover {
+//    background-color: red;
+//    opacity: 0.2;
+//  }
+
+ .activities-index .col-sm {
+   background-color: #ffffff;
+   margin: 5px 5px 5px 5px;
+   border-radius: 5%;
+   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+
+ .activities-index .col-md-4 {
+   margin-top: 20px;
+   margin-bottom: 20px;
  }
 
  .activities-index h1 {
@@ -221,36 +252,58 @@ label {
 .field {
   margin-bottom: -5px;
   border-radius: 5%;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
- .sign-up, .why-join {
+ .sign-up, .why-join, .workout-show, .user-edit {
    margin-top: 100px;
    text-align: center;
    margin: 10px 10px 10px 10px;
    border-radius: 5%;
    padding-top: 5px;
    padding-bottom: 5px;
-   height: 325px;
+   height: 375px;
    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
  }
  .sign-up h2, .why-join h2, .log-in h2 {
- text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
  }
 
  .sign-up {
-   background: #edf3fc;
+   background: #f9fbfc;
    color: #515151;
  }
 
+ .user-edit {
+   height: 100%;
+   margin-top: -50px;
+   padding-bottom: 50px;
+
+ }
+
+ .workout-show #notice {
+   margin-top: 100px;
+ }
+
+ .workout-show {
+   margin-top: 50px;
+ }
+
  .why-join {
-   background: #035891;
-   color: #edf3fc;
+   background: #515151;
+   color: #f9fbfc;
+ }
+
+ .why-image {
+  height: 30%;
+  width: 100%;
  }
 
  .container .log-in {
   margin-top: 100px;
   text-align: center;
-  background: #edf3fc;
+  background: #f9fbfc;
   margin: 10px 10px 10px 10px;
   border-radius: 5%;
   padding-top: 5px;
@@ -268,26 +321,28 @@ label {
    text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
  }
 
-//  .log-in button, {
-//     background-color: #f3fb18;
-//     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-//  }
 
   /* --------------------------
           Workouts
  ---------------------------*/
 
-
-
- .workout-index {
+ .workout-new, .activity-new, .workout-index, .workout .Activity {
   margin-top: 100px;
   text-align: center;
   margin: 10px 10px 10px 10px;
   border-radius: 5%;
   padding-top: 5px;
   padding-bottom: 5px;
-  height: 325px;
+  height: 100%;
   color: #515151;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+
+ .workout-index { 
+   height: 100%;
+   margin-left: 5px;
+   margin-right: 5px;
+   margin-bottom: 100px;
  }
 
  .workout-index h1 {

@@ -4,26 +4,23 @@
         <div class="sign-up">
           <h2>Sign up</h2>
 
-          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
 
             <div class="field">
-              <%= f.label :email %>
-              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <%= f.input :email %>
             </div>
 
             <div class="field">
-              <%= f.label :password %>
-              <%= f.password_field :password, autocomplete: "off" %>
+              <%= f.input :password %>
             </div>
 
             <div class="field">
-              <%= f.label :password_confirmation %>
-              <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              <%= f.input :password_confirmation %>
             </div>
 
             <div class="actions">
-              <%= f.submit "Sign up" %>
+              <%= f.button :submit %>
             </div>
           <% end %>
         </div>
@@ -35,8 +32,11 @@
         <div class="why-join">
           <h2>Why Join?</h2>
           <br />
+          <div class="why-image">
+          <%= image_tag("womanprofilesmall.jpg", { :style => "border-radius:50%; height:100px;"}) %> 
+          </div>
           <br />
-          <p>Lorem ipsum dolor amet salvia vexillologist cronut trust fund marfa dreamcatcher. Hammock chartreuse gentrify pickled small batch. Adaptogen tote bag humblebrag readymade ramps franzen. Gochujang single-origin coffee squid tousled enamel pin bicycle rights photo booth kinfolk fingerstache umami semiotics salvia mustache lomo microdosing. Church-key biodiesel cornhole try-hard snackwave tumeric vegan yr jean shorts squid four loko selvage skateboard retro. Deep v lyft photo booth cornhole artisan semiotics tumeric brooklyn. Celiac bicycle rights artisan, 3 wolf moon hoodie salvia drinking vinegar chillwave neutra affogato fixie helvetica street art.</p>
+          <p>Lorem ipsum dolor amet salvia vexillologist cronut trust fund marfa dreamcatcher. Hammock chartreuse gentrify pickled small batch. Adaptogen tote bag humblebrag readymade ramps franzen. Gochujang single-origin coffee squid tousled enamel pin bicycle rights photo booth kinfolk fingerstache umami semiotics salvia mustache lomo microdosing. Church-key biodiesel cornhole try-hard snackwave tumeric vegan yr jean shorts squid four loko selvage skateboard retro.</p>
           <br />
           <br />
         </div>
@@ -45,3 +45,8 @@
     </div>
   </div>
 </div>
+
+
+
+
+    

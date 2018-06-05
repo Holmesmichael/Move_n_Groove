@@ -1,20 +1,31 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+    </div>
+    <div class="col-sm" style="margin-top: 100px;">
+      <div class="workout-show">
+          <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Activity:</strong>
-  <%= @activity.find(@workout.activity_id).name %>
-</p>
+          <p>
+            <strong>Activity:</strong>
+            <%= @activity.find(@workout.activity_id).name %>
+          </p>
 
-<p>
-  <strong>Duration:</strong>
-  <%= @workout.duration %>
-</p>
+          <p>
+            <strong>Duration:</strong>
+            <%= @workout.duration %>
+          </p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @workout.notes %>
-</p>
+          <p>
+            <strong>Notes:</strong>
+            <%= @workout.notes %>
+          </p>
 
-
-<%= link_to 'Edit', edit_workout_path(@workout) %> |
-<%= link_to 'Back', activity_path %>
+<%= link_to 'Edit', edit_workout_path(@workout) %> 
+<%= link_to 'Delete', @workout, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </div>
+    </div>
+    <div class="col-sm">
+    </div>
+  </div>
+</div>

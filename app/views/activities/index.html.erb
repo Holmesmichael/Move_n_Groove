@@ -1,47 +1,114 @@
 <p id="notice"><%= notice %></p>
-
-
 <div class="container">
-  <div class="row">
-
-    <div class="col-md-3" >
+  <div class="activities-index">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div class="col-md-4">
+        <% if user_signed_in?  %>
+          <button type="button" class="btn btn-primary"><%= link_to 'Log my workout', new_workout_path %></button>
+        <% end %>
+      </div>
+      <div class="col-md-4">
+      </div>
     </div>
-  
-
-    <div class="col-md-6" style="margin-top: 100px;">
-      <div class="activities-index">
-            <h1>Activities</h1>
-            <table>
-              <thead>
-                <tr>
-                  <th colspan="3"></th>
-                  <% if user_signed_in?  %>
-                    <button type="button" class="btn btn-primary"><%= link_to 'Log my workout', new_workout_path %></button>
-                  <% end %>
-                </tr>
-              </thead>
-
-              <tbody>
-              
-                <% @activities.each do |activity| %>
-                  <tr>
-                    <td><%= activity.name %></td>
-                  </tr>
-                <% end %>
-
-
-              </tbody>
-            </table>
-
-            <% if user_signed_in?  %>
-              <button type="button" class="btn btn-primary"><%= link_to 'New Activity', new_activity_path %></button>
-            <% end %>
-            
+      <div class="row">
+      
+        <div class="col-sm">
+          <%= image_tag("iconrunning.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(3) %>
+            <%= @activity.name %>
+            </p>
         </div>
+        <div class="col-sm">
+          <%= image_tag("iconskating.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(4) %>
+            <%= @activity.name %>
+          </p> 
+        </div>
+        <div class="col-sm">
+          <%= image_tag("iconweights.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(5) %>
+            <%= @activity.name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <%= image_tag("iconcycling.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(6) %>
+            <%= @activity.name %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag("mountainbike.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(7) %>
+            <%= @activity.name %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag("iconswimming.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(8) %>
+            <%= @activity.name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <%= image_tag("icontennis.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(9) %>
+            <%= @activity.name %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag("iconvolleyball.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(10) %>
+            <%= @activity.name %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag("iconbasketball.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(11) %>
+            <%= @activity.name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm">
+          <%= image_tag("iconsoccer.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(12) %>
+            <%= @activity.name %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag("iconbaseball.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(13) %>
+            <%= @activity.name %>
+        </div>
+        <div class="col-sm">
+          <%= image_tag("iconskateboard.png", {:style => "width:80px;"}) %> 
+          <p>
+            <% @activity = Activity.find(14) %>
+            <%= @activity.name %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <% if user_signed_in?  %>
+            <button type="button" class="btn btn-primary"><%= link_to 'New Activity', new_activity_path %></button>
+          <% end %>
+        </div>
+        <div class="col-md-4">
+        </div>
+        
+      </div>
     </div>
-
-    <div class="col-md-3">
-    </div>
-
-  </div>
 </div>
+
+
+
