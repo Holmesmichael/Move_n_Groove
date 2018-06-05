@@ -116,7 +116,8 @@ label {
          #edf3fc (light gray)
          #035891 (navyist blue)
          #3f8da4 (teal)
-         #544f4  (dark gray) */
+         #544f4f  (dark gray)
+         aaa0a0  (light gray) */
 
 
   /* --------------------------
@@ -124,14 +125,24 @@ label {
  ---------------------------*/
 
  @import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+ @import url('https://fonts.googleapis.com/css?family=Comfortaa');
  
  h1, h2, h3, h4, h5, h6 {
    font-family: 'Abril Fatface', serif;
  }
 
+ .navbar ul, nav-item, p, .btn {
+   font-family: 'Comfortaa', serif !important;
+   font-weight: 200;
+ }
+
  .main-jumbo h1, h4 {
   color: white;
  }
+
+ .field {
+  font-family: 'Comfortaa', serif !important;
+}
 
    /* --------------------------
           Buttons
@@ -140,20 +151,37 @@ label {
 .btn-primary {
   background-color: #f3fb18 !important;
   border: none !important;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
 }
 
   /* --------------------------
           Navigation
  ---------------------------*/
+.navbar, .navbar-nav, .navbar .container {
+  background-color: #515151;
+}
 
-  /* --------------------------
+.navbar a {
+  color: #aaa0a0;
+}
+
+.nav-item {
+  margin: 0px 0px 0px 20px;
+}
+
+/* --------------------------
           Footer
  ---------------------------*/
 
+ .navbar p {
+   color: #edf3fc;
+   padding-top: 3px;
+ }
+
   /* --------------------------
-          Static Page
+          Home/ Static Page
  ---------------------------*/
- 
 
  .main-jumbo {
   text-align:center;
@@ -161,6 +189,7 @@ label {
  }
 
  .home-photo {
+   opacity: 0.9;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -172,10 +201,95 @@ label {
           Activities 
  ---------------------------*/
 
+ .activities-index {
+  margin-top: 100px;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: #515151;
+ }
+
+ .activities-index h1 {
+ text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+
   /* --------------------------
           Forms
  ---------------------------*/
+.field {
+  margin-bottom: -5px;
+  border-radius: 5%;
+}
+
+ .sign-up, .why-join {
+   margin-top: 100px;
+   text-align: center;
+   margin: 10px 10px 10px 10px;
+   border-radius: 5%;
+   padding-top: 5px;
+   padding-bottom: 5px;
+   height: 325px;
+   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+ .sign-up h2, .why-join h2, .log-in h2 {
+ text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+
+ .sign-up {
+   background: #edf3fc;
+   color: #515151;
+ }
+
+ .why-join {
+   background: #035891;
+   color: #edf3fc;
+ }
+
+ .container .log-in {
+  margin-top: 100px;
+  text-align: center;
+  background: #edf3fc;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 325px;
+  color: #515151;
+ }
+
+ .log-in {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+
+  .log-in h2 {
+   border-radius: 5%;
+   text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
+
+//  .log-in button, {
+//     background-color: #f3fb18;
+//     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+//  }
 
   /* --------------------------
           Workouts
  ---------------------------*/
+
+
+
+ .workout-index {
+  margin-top: 100px;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 325px;
+  color: #515151;
+ }
+
+ .workout-index h1 {
+    text-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+ }
