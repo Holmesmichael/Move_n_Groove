@@ -1,24 +1,21 @@
-# README
+Goals: Clean, minimalist activity tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Users:  
 
-Things you may want to cover:
+Rails Devise gem, basic user creation and set up.
 
-* Ruby version
+Activities:  
 
-* System dependencies
+Index/ Show/ Edit/ New pages where you can modify and add new data
 
-* Configuration
+Worksouts:
 
-* Database creation
+Using SQL joins to add a workout to an existing activity for a specific user
 
-* Database initialization
+Tech Used:
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+HTML  |
+CSS   |
+Bootstrap   |
+Ruby on Rails   |
+SQLite   
